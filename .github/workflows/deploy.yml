@@ -18,7 +18,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
-      - run: flutter create .
+      - run: flutter create . --project-name campus_bites
       - run: flutter build web --base-href "/${{ github.event.repository.name }}/"
       - uses: actions/upload-pages-artifact@v3
         with:
